@@ -1,7 +1,17 @@
+import { Route, Routes } from "react-router-dom"
+import GlobalStyles from "./styles/GlobalStyles"
+import Layout from "./components/Layout"
 
 function App() {
   return (
-    <div ></div>
+    <>
+      <GlobalStyles />
+      <Layout>
+        <Routes>
+          {/* <Route path="/" element={<FrontalPage />} /> */}
+        </Routes>
+      </Layout>
+    </>
   )
 }
 

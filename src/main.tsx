@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client"
-import { HashRouter } from "react-router-dom"
+import { BrowserRouter } from "react-router-dom"
 import { Provider } from "react-redux"
 import App from "./App"
 import { store } from "./store/store"
@@ -11,13 +11,13 @@ if (container) {
   const root = createRoot(container)
 
   root.render(
-    <HashRouter>
+    <BrowserRouter>
       <Provider store={store}>
         <StrictMode>
           <App />
         </StrictMode>
       </Provider>
-    </HashRouter>,
+    </BrowserRouter>
   )
 } else {
   throw new Error(

@@ -28,56 +28,56 @@ function MainLowerPart() {
   const [infoData, setInfoData] = useState<InfoProps[]>([])
 
 
-  useEffect(() => {
-    async function fetchInfoData() {
-      try {
-        let endpoint = `/`
-        if (location.pathname === `/cafes-restaurants`) {
-          endpoint = `/restaurants_info`
-          console.log("Fetching data from endpoint:", endpoint)
-        } else if (location.pathname === `/children`) {
-          endpoint = `/children_info`
-          console.log("Fetching data from endpoint:", endpoint)
-        } else if (location.pathname === `/shops`) {
-          endpoint = `/shops_info`
-          console.log("Fetching data from endpoint:", endpoint)
-        } else if (location.pathname === `/doctors/physicians`) {
-          endpoint = `/doctors_info/physician`
-          console.log("Fetching data from endpoint:", endpoint)
-        } else if (location.pathname === `/doctors/stomatologists`) {
-          endpoint = `/doctors_info/stomatologist`
-          console.log("Fetching data from endpoint:", endpoint)
-        } else if (location.pathname === `/doctors/pediatrists`) {
-          endpoint = `/doctors_info/pediatrist`
-          console.log("Fetching data from endpoint:", endpoint)
-        } else if (location.pathname === `/doctors/orthopedists`) {
-          endpoint = `/doctors_info/orthopedist`
-          console.log("Fetching data from endpoint:", endpoint)
-        } else if (location.pathname === `/doctors/cardiologists`) {
-          endpoint = `/doctors_info/cardiologist`
-          console.log("Fetching data from endpoint:", endpoint)
-        } else if (location.pathname === `/doctors/dermatologists`) {
-          endpoint = `/doctors_info/dermatologist`
-          console.log("Fetching data from endpoint:", endpoint)
-        } else if (location.pathname === `/services/legal_services`) {
-          endpoint = `/legal_services_info`
-          console.log("Fetching data from endpoint:", endpoint)
-        } else if (location.pathname === `/services/translators`) {
-          endpoint = `/translators_info`
-          console.log("Fetching data from endpoint:", endpoint)
-        } else if (location.pathname === `/services/hair_beauty`) {
-          endpoint = `/hair_beauty_info`
-          console.log("Fetching data from endpoint:", endpoint)
-        }
-        const response = await instance.get<InfoProps[]>(endpoint)
-        console.log("Received data:", response.data)
-        setInfoData(response.data)
-      } catch (error) {
-        console.error("Error fetching data:", error)
-      }
-    }
-    fetchInfoData()
-  }, [location.pathname])
+  // useEffect(() => {
+  //   async function fetchInfoData() {
+  //     try {
+  //       let endpoint = `/`
+  //       if (location.pathname === `/cafes-restaurants`) {
+  //         endpoint = `/restaurants_info`
+  //         console.log("Fetching data from endpoint:", endpoint)
+  //       } else if (location.pathname === `/children`) {
+  //         endpoint = `/children_info`
+  //         console.log("Fetching data from endpoint:", endpoint)
+  //       } else if (location.pathname === `/shops`) {
+  //         endpoint = `/shops_info`
+  //         console.log("Fetching data from endpoint:", endpoint)
+  //       } else if (location.pathname === `/doctors/physicians`) {
+  //         endpoint = `/doctors_info/physician`
+  //         console.log("Fetching data from endpoint:", endpoint)
+  //       } else if (location.pathname === `/doctors/stomatologists`) {
+  //         endpoint = `/doctors_info/stomatologist`
+  //         console.log("Fetching data from endpoint:", endpoint)
+  //       } else if (location.pathname === `/doctors/pediatrists`) {
+  //         endpoint = `/doctors_info/pediatrist`
+  //         console.log("Fetching data from endpoint:", endpoint)
+  //       } else if (location.pathname === `/doctors/orthopedists`) {
+  //         endpoint = `/doctors_info/orthopedist`
+  //         console.log("Fetching data from endpoint:", endpoint)
+  //       } else if (location.pathname === `/doctors/cardiologists`) {
+  //         endpoint = `/doctors_info/cardiologist`
+  //         console.log("Fetching data from endpoint:", endpoint)
+  //       } else if (location.pathname === `/doctors/dermatologists`) {
+  //         endpoint = `/doctors_info/dermatologist`
+  //         console.log("Fetching data from endpoint:", endpoint)
+  //       } else if (location.pathname === `/services/legal_services`) {
+  //         endpoint = `/legal_services_info`
+  //         console.log("Fetching data from endpoint:", endpoint)
+  //       } else if (location.pathname === `/services/translators`) {
+  //         endpoint = `/translators_info`
+  //         console.log("Fetching data from endpoint:", endpoint)
+  //       } else if (location.pathname === `/services/hair_beauty`) {
+  //         endpoint = `/hair_beauty_info`
+  //         console.log("Fetching data from endpoint:", endpoint)
+  //       }
+  //       const response = await instance.get<InfoProps[]>(endpoint)
+  //       console.log("Received data:", response.data)
+  //       setInfoData(response.data)
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error)
+  //     }
+  //   }
+  //   fetchInfoData()
+  // }, [location.pathname])
 
   return (
     <MainLowerPartContainer>

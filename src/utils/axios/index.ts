@@ -13,7 +13,7 @@ const cookies = new Cookies();
 
 let baseURL = '/api';
 if (process.env.NODE_ENV === 'development') {
-  baseURL = 'http://localhost:8080/api';
+  baseURL = 'http://localhost:8080';
 }
 
 export const instance = axios.create({

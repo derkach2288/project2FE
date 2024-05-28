@@ -232,7 +232,7 @@ function Header() {
           </div>
         ) : ( */}
           <HeaderSignInContainer>
-            <HeaderSignInText to="/login">
+            <HeaderSignInText to="/register">
               <ButtonProf>Авторизация</ButtonProf>
             </HeaderSignInText>
           </HeaderSignInContainer>

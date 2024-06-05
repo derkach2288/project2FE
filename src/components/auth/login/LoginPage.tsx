@@ -24,7 +24,7 @@ function LoginPage() {
     const userDataLog = { username, password };
 
     try {
-      const response = await instance.post("/auth/login", userDataLog, {
+      const response = await instance.post("/api/login", userDataLog, {
         headers: { accept: "*/*", "Content-Type": "application/json" }
       });
 
@@ -103,7 +103,7 @@ function LoginPage() {
               Войти
             </Button>
             <Typography variant="body2" sx={{ fontFamily: "Montserrat", fontWeight: 400 }}>
-              У вас нет аккаунта?? <IncitingText to="/user_login/register">Регистрация</IncitingText>
+              У вас нет аккаунта?? <IncitingText to="/register">Регистрация</IncitingText>
             </Typography>
           </Box>
         </Form>
